@@ -155,6 +155,15 @@ body{
     .text{
         margin-bottom: 80px;
     }
+    .text h3{
+        font-size: 29px;
+    }
+    .text p{
+        font-size: 15px;
+    }
+    .text h1{
+        font-size: 36px;
+    }
 }
 
 /* keyframe animations */
