@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: #071113;
+    color: #fff;
+}
+
+/* header */
+.header{
+    top: 0;
+    left: 0;
+    /* position: fixed; */
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* z-index: 100; */
+}
+.logo{
+    font-size: 25px;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbutton a{
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--1));
+}
+.navbutton a:hover, .navbutton a.active{
+    color: rgb(124, 102, 0);
+    
+}
+
+
+/* main */
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.text{
+    /* font-size: 25px; */
+    max-width: 600px;
+}
+.text h3{
+    font-size: 32px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.text h3:nth-last-of-type(1) {
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.text h3 span{
+    color: rgb(124, 102, 0);
+    
+}
+.text h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.text p{
+    line-height: 1.5em;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.social-profile a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(124, 102, 0);
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(124, 102, 0);
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--1));
+}
+.social-profile a:hover{
+    background: rgb(31, 92, 16);
+    box-shadow: 0 0 20px rgb(113, 236, 160);
+}
+.button{
+    display: inline-block;
+    background: rgb(124, 102, 0);
+    padding: 20px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.button:hover{
+    box-shadow: 0 0 20px grey;
+    transition: .5s ease;
+}
+
+
+.image img{
+    width: 350px;
+    border-radius: 200px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards /*zoomin image animation*/, floatImage 4s ease-in-out infinite /* floating image animation*/;
+    animation-delay: 1.5s, 3s /*float delay*/;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 770px){
+    .logo{
+        font-size: 10px;
+        cursor: default;
+        color: rgb(124, 102, 0);
+    }
+    .navbutton{
+        display: none;
+    }
+    .main{
+        display: block;
+    }
+    .text{
+        margin-bottom: 80px;
+    }
+}
+
+/* keyframe animations */
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
