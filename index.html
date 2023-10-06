@@ -10,22 +10,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- header -->
+<!-- HEADER -->
+    <div id="home"></div>
     <section class="header">
         <div class="logo">
             <h3>MykeOnWeb</h3>
         </div>
 
+        <i class="fa fa-bars" aria-hidden="true" id="menu-btn"></i>
+
         <nav class="navbutton">
-            <a href="" style="--1:1;" class="active">Home</a>
-            <a href="" style="--1:2;">Portfolio</a>
-            <a href="" style="--1:3;">Skill</a>
-            <a href="" style="--1:4;">About</a>
-            <a href="" style="--1:5;">Contact</a>
+            <a href="#home" style="--1:1;" class="active">Home</a>
+            <a href="#portfolio" style="--1:2;">Portfolio</a>
+            <a href="#services" style="--1:3;">Services</a>
+            <a href="#about" style="--1:4;">About</a>
+            <a href="#contact" style="--1:5;">Contact</a>
         </nav>
     </section>
+
+     <!-- go up -->
+     <div class="go-up">
+        <div class="home-btn">
+            <a href="#home"><i class="fa fa-arrow-up"></i></a>
+        </div>
+    </div>
     
-<!-- main -->
+<!-- MAIN -->
     <section class="main">
         <div class="text">
             <h3>HELLO, my name is</h3>
@@ -46,8 +56,144 @@
         </div>
     </section>
 
+ <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./Assets/Images/mypic.jpeg" alt="">
+        </div>
 
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>A front-end developer with good problem solving skills.
+                 Proficient in HTML, CSS, Javascript and React. I also work very well with technologies like GitHub.
+                <br> <br>
+                I am highly disciplined, very resourceful, love to work with people and  a good team player.
+                </p>
+            <a href="#portfolio" class="button">Projects</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque fugiat sunt praesentium quos neque ea, sapiente explicabo quisquam unde vel aut. Doloremque ullam odio rerum inventore animi consequatur pariatur. Dolor.</p>
+                <a href="#" class="button">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <h3>Technical Writing</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque fugiat sunt praesentium quos neque ea, sapiente explicabo quisquam unde vel aut. Doloremque ullam odio rerum inventore animi consequatur pariatur. Dolor.</p>
+                <a href="#" class="button">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio section -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="./Assets/Images/michael.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>web design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nobis?</p>
+                    <a href="#"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./Assets/Images/michael.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>web design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nobis?</p>
+                    <a href="#"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./Assets/Images/michael.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>web design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nobis?</p>
+                    <a href="#"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./Assets/Images/michael.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>web design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nobis?</p>
+                    <a href="#"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./Assets/Images/michael.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>web design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nobis?</p>
+                    <a href="#"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./Assets/Images/michael.png" alt="">
+                <div class="portfolio-layer">
+                    <h4>web design</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nobis?</p>
+                    <a href="#"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="" method="post">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" id="name" name="name" required>
+                <input type="email" placeholder="Email Address" id="email" name="email" required>
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number" id="number" name="number" required>
+                <input type="text" placeholder="Email Subject" id="subject" name="subject" required>
+            </div>
+
+            <textarea id="message" name="message" cols="30" rows="10" placeholder="Enter Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="button">
+        </form>
+    </section>
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 Michael Sunday</p>
+        </div>
+
+        
+    </footer>
+
+    <!-- typed js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- custom js -->
     <script src="script.js"></script>
 </body>
 </html>
