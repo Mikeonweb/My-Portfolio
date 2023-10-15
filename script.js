@@ -29,7 +29,7 @@ window.onscroll = () => {
     //  sticky navbutton
     let header = document.querySelector('.header');
 
-    header.classList.toggle('sticky', window.srollY > 100);
+    header.classList.toggle('sticky', window.scrollY > 100);
 
     // remove toggle icon when you click on navbutton link
     menuIcon.onclick = () => {
@@ -53,22 +53,23 @@ var typed = new Typed(".multi-text", {
 let menuIcon = document.querySelector('#menu-btn');
 let navBar = document.querySelector('.navbutton');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-times');
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.add('fa-times');
     navBar.classList.toggle('active');
-};
+});
+
 
 
 // scroll reveal
-ScrollReveal({ 
-    reset: true,
-    distance: '100px',
-    duration: 2000,
-    delay: 200
-});
+// ScrollReveal({ 
+//     reset: true,
+//     distance: '100px',
+//     duration: 2000,
+//     delay: 200
+// });
 
- ScrollReveal().reveal('.about, .services-box h3', { origin: 'top', scale: 1 });
- ScrollReveal().reveal('.heading', { origin: 'left', scale: 1 });
- ScrollReveal().reveal('.main, .services-container, .portfolio-container', { origin: 'right', scale: 1 });
- ScrollReveal().reveal('.services-box p, form', { origin: 'bottom', scale: 1 });
+//  ScrollReveal().reveal('.about, .services-box h3', { origin: 'top' });
+//  ScrollReveal().reveal('.heading', { origin: 'left' });
+//  ScrollReveal().reveal('.main, .services-container, .portfolio-container', { origin: 'right'});
+//  ScrollReveal().reveal('.services-box p, form', { origin: 'bottom'});
 

@@ -31,7 +31,7 @@ body{
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
-#menu-btn{
+#menu-btn, #close-btn{
     font-size: 3rem;
     display: none;
 }
@@ -70,7 +70,6 @@ body{
     padding: 70px 10% 0;
 }
 .text{
-    /* font-size: 25px; */
     max-width: 600px;
 }
 .text h3{
@@ -359,6 +358,17 @@ textarea{
     margin-top: 2rem;
     cursor: pointer;
     border: 0;
+}
+
+/* whatsapp button */
+.whatsapp-button{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: .5rem;
+    margin-bottom: 4rem;
+    width: 30px;
+    height: 30px;
 }
 
 
